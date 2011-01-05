@@ -201,7 +201,7 @@
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'VESPER052183');
+	Configure::write('Security.salt', 'ALPHAOMEGA123456');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
