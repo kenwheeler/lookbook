@@ -9,7 +9,7 @@
 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-<?php //echo $html->css('cake.generic'); ?>
+<?php echo $html->css('cake.generic'); ?>
 
 <?php echo $scripts_for_layout ?>
 
@@ -26,6 +26,8 @@
 <?php echo $content_for_layout ?>
 
 <div id="footer"></div>
+
+<?php echo $this->element('sql_dump'); ?>
 
 </body>
 

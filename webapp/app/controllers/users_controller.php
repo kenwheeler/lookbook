@@ -17,6 +17,7 @@ class UsersController extends AppController {
 	}
 	
 	function register() {
+	  
 		if (!empty($this->data))
 		{
 			$this->User->data = Sanitize::clean($this->data);
