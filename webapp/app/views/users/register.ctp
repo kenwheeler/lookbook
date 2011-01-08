@@ -1,3 +1,7 @@
+<div id="registerForm">
+	
+<h1>LOOKBOOK</h1>
+
 <?php
 
 echo $form->create('User', array('action' => 'register'));
@@ -8,3 +12,4 @@ echo $form->input('password');
 echo $form->end('Register');
 
 ?>
+</div>

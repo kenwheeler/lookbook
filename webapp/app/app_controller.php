@@ -45,6 +45,7 @@ class AppController extends Controller {
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
 		$this->Auth->loginRedirect = array('controller' => 'pages', 'action' => 'display', 'home');
 		$this->Auth->loginError = "No, you fool!  That's not the right password!";
+		$this->Auth->allow('controller');
 	}
 	
 	function isAuthorized() {

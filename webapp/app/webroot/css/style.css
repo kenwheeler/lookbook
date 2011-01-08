@@ -1,0 +1,147 @@
+body {
+margin: 0;
+padding: 0;	
+background: #565656;
+font-family: Tahoma, Arial, san-serif;
+color: #fff;
+}
+
+#loginForm h1,
+#registerForm h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	text-align: center;
+	font-family: Arial Black;
+	margin-bottom: 10px;
+	color: #16445e;
+}
+
+#loginForm,
+#registerForm {
+	width: 400px;
+	margin: auto;
+	margin-top: 150px;
+	border: 2px solid #ccc;
+	padding: 20px;
+	border-radius: 20px;
+	background: #eee;
+}
+
+#UserLoginForm,
+#UserRegisterForm{ 
+	width: 400px;
+}
+
+#UserLoginForm label,
+#UserRegisterForm label{
+	display: block;
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 2px;
+	color: #16445e;
+}
+
+#UserLoginForm input,
+#UserRegisterForm input {
+	display: block;
+	font-size: 12px;
+	margin-bottom: 5px;
+	border: 2px solid #16445e;
+	width: 385px;
+	border-radius: 5px;
+	outline: none;
+	padding: 5px;
+}
+
+#UserLoginForm input[type=submit] {
+	border-radius: 5px;
+	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #16445e;
+	border: 1px solid #ccc;
+	margin-top: 12px;
+	color: #16445e;
+	font-size: 12px;
+	font-weight: bold;
+	width: 195px;
+	color: #fff;
+}
+
+#UserRegisterForm input[type=submit] {
+	border-radius: 5px;
+	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #16445e;
+	border: 1px solid #ccc;
+	margin: auto;
+	margin-top: 20px;
+	color: #16445e;
+	font-size: 12px;
+	font-weight: bold;
+	width: 195px;
+	color: #fff;
+}
+
+#UserRegisterForm .submit {
+	text-align: center;
+}
+
+#UserLoginForm .submit {
+	float: right;
+	display: inline-block;
+}
+
+#UserLoginForm a,
+#UserRegisterForm a {
+	border-radius: 5px;
+	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #16445e;
+	border: 1px solid #ccc;
+	margin-top: 12px;
+	color: #16445e;
+	font-size: 12px;
+	font-weight: bold;
+	width: 175px;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+.product {
+	list-style-type: none;
+	display: block;
+	float: left;
+	height: 225px;
+	width: 175px;
+	padding: 20px;
+	background: #ccc;
+	margin: 10px;
+}
+
+.product img {
+	display: block;
+	border: 2px solid #565656;
+	margin-bottom: 5px;
+}
+
+.product_name {
+	color: #565656;
+	font-size: 10px;
+	margin: 0px;
+	margin-top: 10px;
+	display: block;
+}
+
+.product_price {
+	color: #565656;
+	font-size: 10px;
+	margin: 0px;
+	margin-top: 5px;
+	display: block;	
+}

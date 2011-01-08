@@ -1,4 +1,5 @@
 <?php
 
+$this->layout = "ajax";
 
 ?>

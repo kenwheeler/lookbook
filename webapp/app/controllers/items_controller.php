@@ -9,23 +9,36 @@ class ItemsController extends AppController {
 		parent::beforeFilter();
 	}
 	
+	function index() {
+		$user_id = $this->Session->read('Auth.User.id');
+		$items = $this->Item->find('all', array('conditions' => array('user_id' => $user_id)));
+		$this->set('items',$items);
+	}
 	
 	
 	function add() {
-	  
+		  
 	  if(!empty($this->passedArgs))
-	  {	  
+	  {
 	  $this->data['Item']['user_id']=$this->passedArgs['user_id'];
+	  $product_image = $this->passedArgs['product_image'];
+	  $product_image = str_replace("*","/",$product_image);
+      $product_image = str_replace(";","?",$product_image);
+      $product_image = str_replace("|","&",$product_image);
+      $product_image = str_replace("^",":",$product_image);
+	  $this->data['Item']['product_image']=$product_image;
+	  $this->data['Item']['product_name']=$this->passedArgs['product_name'];
+	  $this->data['Item']['product_price']=$this->passedArgs['product_price'];
 		if (!empty($this->data))
 		{
 			$this->Item->data = Sanitize::clean($this->data);
     
 			if ($this->Item->save())
 			{
-				echo "Product Added";
+				echo "alert('Product Added'); destroyLookbook();";
 			}
 			else{ 
-			  echo "Product Add Failed";
+			  echo "alert('Product Add Failed'); destroyLookbook();";
 			}
 		}
 		}
