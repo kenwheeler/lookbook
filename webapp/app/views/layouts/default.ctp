@@ -31,7 +31,7 @@
 			
 		<? if($session->check('Auth.User.id')): ?>
 		
-		<li><a href="/users/<? echo $session->read('Auth.User.username'); ?>">profile</a></li><li><a href="/users/account">account</a></li><li><a href="/users/logout">log out</a></li>
+		<li><a href="/<? echo $session->read('Auth.User.username'); ?>">profile</a></li><li><a href="/users/account">account</a></li><li><a href="/users/logout">log out</a></li>
 		
 		<? else: ?>
 		

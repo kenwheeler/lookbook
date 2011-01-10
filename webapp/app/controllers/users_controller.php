@@ -33,9 +33,9 @@ class UsersController extends AppController {
 		}
 	}
 	
-	function view($username) {
+	function view() {
 		
-		if ($user = $this->User->findByUsername($username)) { 
+		if ($user = $this->User->findByUsername($this->params['slug'])) { 
 		        $this->set('user', $user); 
 		} 
 		

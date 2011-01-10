@@ -21,7 +21,13 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+	App::import('Lib', array('routes/SlugRoute'));
 	
 	// Default route 
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home')); 
 	Router::connect('/add_products', array('controller' => 'pages', 'action' => 'display', 'add_products'));
+	Router::connect(
+	     '/:slug', 
+	     array('controller' => 'users', 'action' => 'view'),
+	     array('routeClass' => 'SlugRoute')
+	);
