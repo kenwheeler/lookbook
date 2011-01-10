@@ -37,8 +37,16 @@ class UsersController extends AppController {
 	
 	function view() {
 		
-		if ($user = $this->User->findByUsername($this->params['slug'])) { 
-		        $this->set('user', $user); 
+		if ($currentUser = $this->User->findByUsername($this->params['slug'])) {
+		        App::import('Model', 'Friend');
+		        $friend = new Friend;
+		        if($following = $friend->find('first',array('conditions' => array('Friend.user_id' => $this->Auth->user('id'), 'Friend.to_user_id' => $currentUser['User']['id'])))){
+		        $this->set('following', true);
+		        }
+		        else {
+		        $this->set('following', false); 
+		        }
+		        $this->set('currentUser', $currentUser); 
 		} 
 		
 	}
