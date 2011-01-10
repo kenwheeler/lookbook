@@ -38,10 +38,12 @@ App::import('Sanitize');
 
 class AppController extends Controller {
 
-	var $components = array('Auth', 'Session');
-	var $helpers = array('Html', 'Form', 'Session');
+	var $components = array('Auth', 'Session', 'Facebook.Connect');
+	var $helpers = array('Html', 'Form', 'Session','Facebook.Facebook');
 	
 	function beforeFilter() {
+		$this->set('user', $this->Auth->user());
+		$this->set('facebookUser', $this->Connect->user());
 		$this->Auth->fields = array('username' => 'username', 'password' => 'password');
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
 		$this->Auth->loginRedirect = array('controller' => 'pages', 'action' => 'display', 'home');

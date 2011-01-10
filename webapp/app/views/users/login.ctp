@@ -9,4 +9,8 @@ echo $form->end('Login');
 
 ?>
 
+<p>or</p>
+
+<?= $facebook->login(array('perms' => 'email')) ?>
+
 </div>

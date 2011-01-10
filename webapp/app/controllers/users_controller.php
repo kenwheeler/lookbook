@@ -9,7 +9,9 @@ class UsersController extends AppController {
 
 	function login()
 	{
-
+		if($this->Connect->user()){
+			$this->redirect('/');
+		}
 	}
 
 	function logout(){

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?= $facebook->html() ?>
 
 <head>
 
@@ -31,14 +31,18 @@
 			
 		<? if($session->check('Auth.User.id')): ?>
 		
-		<li><a href="/<? echo $session->read('Auth.User.username'); ?>">profile</a></li><li><a href="/users/account">account</a></li><li><a href="/users/logout">log out</a></li>
-		
+		<li><a href="/<? echo $session->read('Auth.User.username'); ?>">profile</a></li><li><a href="/users/account">account</a></li>
+		<? if($facebookUser): ?>
+		<li><?= $facebook->Logout(array('redirect'=>'/users/logout', 'label'=>'log out')); ?></li>
+		<? else: ?>
+		<li><a href="/users/logout">log out</a></li>
+		<? endif; ?>
 		<? else: ?>
 		
 		<li><a href="/users/login">sign in</a></li><li><a href="/users/register">register</a></li>
 		
 		<? endif; ?>
-		
+				
 		</ul>
 		
 		<ul id="sections">
@@ -70,6 +74,8 @@
 <div style="clear:both"></div>
 
 </div>
+
+<?= $facebook->init(); ?>
 
 </body>
 
