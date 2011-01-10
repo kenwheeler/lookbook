@@ -47,7 +47,7 @@
 		
 		<ul id="sections">
 		
-		<li><a href="/">home</a></li><li><a href="#">popular</a></li><li><a href="/items">items</a></li><li><a href="#">collections</a></li>
+		<li><a href="/">home</a></li><li><a href="/friends">friends</a></li><li><a href="/items">items</a></li><li><a href="#">collections</a></li>
 		
 		</ul>
 		
