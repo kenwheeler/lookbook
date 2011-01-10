@@ -1,18 +1,17 @@
 <?php
 
 class User extends AppModel {
+	
    var $name = 'User';
+
    var $validate = array(
-	   'first_name' => array( 
-			'rule' => 'notEmpty'
-		),
-	   'last_name' => array( 
+	   'username' => array( 
 			'rule' => 'notEmpty'
 		),
 		'email_address' => array( 
 			'rule' => 'notEmpty'
 		),
-       'password' => array( 
+       'passwrd' => array( 
 			'rule' => 'notEmpty'
 		)
    );

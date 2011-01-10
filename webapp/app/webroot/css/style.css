@@ -1,9 +1,102 @@
 body {
 margin: 0;
 padding: 0;	
-background: #565656;
-font-family: Tahoma, Arial, san-serif;
-color: #fff;
+background: url(/img/background.png);
+font-family: Cabin, Arial, san-serif;
+font-size: 12px;
+color: #565656;
+border-top: 5px solid #00bdf6;
+}
+
+.error-message {
+	color: #ff0000;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+a {
+	color: #565656;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00bdf6;
+}
+
+.blue {
+	color: #00bdf6;
+}
+
+#container {
+	margin: 0;
+}
+
+#sidebar {
+	position: relative;
+	width: 200px;
+	height: auto;
+	z-index: 9999;
+}
+
+#main {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 100%;
+}
+
+#inner {
+	margin-left: 200px;
+}
+
+#inner ul {
+	margin: 0;
+	padding: 0;
+}
+
+#inner h1 {
+	margin: 0;
+	margin-top: 25px;
+}
+
+h1 {
+	font-size: 39px;
+	margin: 20px;
+}
+
+
+#account,
+#sections,
+#about {
+	width: 200px;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 20px;
+}
+
+#account li,
+#sections li,
+#about li{
+	width: 200px;
+	list-style-type: none;
+	text-align: right;
+}
+
+#account li a,
+#sections li a,
+#about li a{
+	color: #565656;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	margin-right: 22px;
+}
+
+#account li a:hover,
+#sections li a:hover,
+#about li a:hover{
+	color: #00bdf6;
 }
 
 #loginForm h1,
@@ -20,12 +113,8 @@ color: #fff;
 #loginForm,
 #registerForm {
 	width: 400px;
-	margin: auto;
-	margin-top: 150px;
-	border: 2px solid #ccc;
 	padding: 20px;
-	border-radius: 20px;
-	background: #eee;
+	margin-top: 10px;
 }
 
 #UserLoginForm,
@@ -39,7 +128,7 @@ color: #fff;
 	font-weight: bold;
 	font-size: 12px;
 	margin-bottom: 2px;
-	color: #16445e;
+	color: #565656;
 }
 
 #UserLoginForm input,
@@ -47,7 +136,7 @@ color: #fff;
 	display: block;
 	font-size: 12px;
 	margin-bottom: 5px;
-	border: 2px solid #16445e;
+	border: 2px solid #565656;
 	width: 385px;
 	border-radius: 5px;
 	outline: none;
@@ -59,14 +148,15 @@ color: #fff;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background: #16445e;
-	border: 1px solid #ccc;
+	background: #565656;
+	border: none;
 	margin-top: 12px;
 	color: #16445e;
 	font-size: 12px;
 	font-weight: bold;
 	width: 195px;
 	color: #fff;
+	cursor: pointer;
 }
 
 #UserRegisterForm input[type=submit] {
@@ -74,24 +164,15 @@ color: #fff;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background: #16445e;
+	background: #565656;
 	border: 1px solid #ccc;
-	margin: auto;
 	margin-top: 20px;
 	color: #16445e;
 	font-size: 12px;
 	font-weight: bold;
 	width: 195px;
 	color: #fff;
-}
-
-#UserRegisterForm .submit {
-	text-align: center;
-}
-
-#UserLoginForm .submit {
-	float: right;
-	display: inline-block;
+	cursor: pointer;
 }
 
 #UserLoginForm a,
@@ -111,37 +192,59 @@ color: #fff;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
+	cursor: pointer;
 }
 
 .product {
+	position: relative;
 	list-style-type: none;
 	display: block;
 	float: left;
 	height: 225px;
-	width: 175px;
-	padding: 20px;
-	background: #ccc;
-	margin: 10px;
+	max-width: 175px;
+	padding: 10px;
+	background: rgba(50,50,50,.5);
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.product:hover {
+	background: #565656;
 }
 
 .product img {
 	display: block;
 	border: 2px solid #565656;
 	margin-bottom: 5px;
+	width: 150px;
+	height: 150px;
 }
 
 .product_name {
-	color: #565656;
+	color: #fff;
 	font-size: 10px;
 	margin: 0px;
 	margin-top: 10px;
 	display: block;
+	max-width: 150px
 }
 
 .product_price {
-	color: #565656;
+	color: #fff;
 	font-size: 10px;
 	margin: 0px;
 	margin-top: 5px;
-	display: block;	
+	display: block;
+	max-width: 150px	
+}
+
+.buy_now {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #eee;
+}
+
+.buy_now:hover {
+	color: #00bdf6;
 }

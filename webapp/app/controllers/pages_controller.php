@@ -80,7 +80,7 @@ class PagesController extends AppController {
 			$title_for_layout = Inflector::humanize($path[$count - 1]);
 		}
 		
-		$this->set('user_id',$this->Session->read('Auth.User.id'));
+		$this->set('user_id', $this->Session->read('Auth.User.id'));
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
 	}

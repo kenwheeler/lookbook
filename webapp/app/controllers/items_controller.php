@@ -11,6 +11,7 @@ class ItemsController extends AppController {
 	
 	function index() {
 		$user_id = $this->Session->read('Auth.User.id');
+		$this->Item->order = 'Item.created_at DESC';
 		$items = $this->Item->find('all', array('conditions' => array('user_id' => $user_id)));
 		$this->set('items',$items);
 	}

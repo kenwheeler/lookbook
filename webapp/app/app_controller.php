@@ -41,11 +41,11 @@ class AppController extends Controller {
 	var $helpers = array('Html', 'Form', 'Session');
 	
 	function beforeFilter() {
-		$this->Auth->fields = array('username' => 'email_address', 'password' => 'password');
+		$this->Auth->fields = array('username' => 'username', 'password' => 'password');
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
 		$this->Auth->loginRedirect = array('controller' => 'pages', 'action' => 'display', 'home');
 		$this->Auth->loginError = "No, you fool!  That's not the right password!";
-		$this->Auth->allow('controller');
+		$this->Auth->allow('controller');		
 	}
 	
 	function isAuthorized() {
