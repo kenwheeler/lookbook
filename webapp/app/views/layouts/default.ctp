@@ -13,6 +13,8 @@
 
 <?php echo $html->css('style'); ?>
 
+<?php echo $this->Html->script('jquery'); ?>
+
 <?php echo $scripts_for_layout ?>
 
 </head>

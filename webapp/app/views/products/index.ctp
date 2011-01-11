@@ -1,3 +1,12 @@
+<script language="javascript">
+$(document).ready(function() {
+  $('.product').hover(function(){
+    $(this).children('.product_info').slideDown('fast');
+  }, function(){
+    $(this).children('.product_info').slideUp('fast');
+    });
+});
+</script>
 <h1>products</h1>
 <ul>
 <?php
