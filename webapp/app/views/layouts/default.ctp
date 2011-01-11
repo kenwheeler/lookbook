@@ -30,8 +30,8 @@
 		<ul id="account">
 			
 		<? if($session->check('Auth.User.id')): ?>
-		
-		<li><a href="/<? echo $session->read('Auth.User.username'); ?>">profile</a></li><li><a href="/users/account">account</a></li>
+				
+		<li><a href="/<?= $user['User']['username'] ?>">profile</a></li><li><a href="/users/account">account</a></li>
 		<? if($facebookUser): ?>
 		<li><?= $facebook->Logout(array('redirect'=>'/users/logout', 'label'=>'log out')); ?></li>
 		<? else: ?>
@@ -47,7 +47,7 @@
 		
 		<ul id="sections">
 		
-		<li><a href="/">home</a></li><li><a href="/friends">friends</a></li><li><a href="/items">items</a></li><li><a href="#">collections</a></li>
+		<li><a href="/">home</a></li><li><a href="/friends">friends</a></li><li><a href="/products">products</a></li><li><a href="/collections">collections</a></li>
 		
 		</ul>
 		

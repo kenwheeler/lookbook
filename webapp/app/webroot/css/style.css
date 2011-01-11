@@ -111,19 +111,22 @@ h1 {
 }
 
 #loginForm,
-#registerForm {
+#registerForm,
+#editForm {
 	width: 400px;
 	padding: 20px;
 	margin-top: 10px;
 }
 
 #UserLoginForm,
-#UserRegisterForm{ 
+#UserRegisterForm,
+#UserEditForm{ 
 	width: 400px;
 }
 
 #UserLoginForm label,
-#UserRegisterForm label{
+#UserRegisterForm label,
+#UserEditForm label{
 	display: block;
 	font-weight: bold;
 	font-size: 12px;
@@ -132,7 +135,8 @@ h1 {
 }
 
 #UserLoginForm input,
-#UserRegisterForm input {
+#UserRegisterForm input,
+#UserEditForm input {
 	display: block;
 	font-size: 12px;
 	margin-bottom: 5px;
@@ -148,35 +152,37 @@ h1 {
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background: #565656;
+	background: #16445e;
 	border: none;
 	margin-top: 12px;
 	color: #16445e;
 	font-size: 12px;
 	font-weight: bold;
-	width: 195px;
+	width: auto;
 	color: #fff;
 	cursor: pointer;
 }
 
-#UserRegisterForm input[type=submit] {
+#UserRegisterForm input[type=submit],
+#UserEditForm input[type=submit] {
 	border-radius: 5px;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background: #565656;
+	background: #16445e;
 	border: 1px solid #ccc;
 	margin-top: 20px;
 	color: #16445e;
 	font-size: 12px;
 	font-weight: bold;
-	width: 195px;
 	color: #fff;
+	width: auto;
 	cursor: pointer;
 }
 
 #UserLoginForm a,
-#UserRegisterForm a {
+#UserRegisterForm a,
+#UserEditForm a {
 	border-radius: 5px;
 	padding: 10px;
 	padding-left: 10px;
@@ -247,4 +253,63 @@ h1 {
 
 .buy_now:hover {
 	color: #00bdf6;
+}
+
+.user_image {
+	border-radius: 5px;
+	display: block;
+	margin: auto;
+	height: 50px;
+	width: 50px;
+	margin-bottom: 5px;
+}
+
+.user_box {
+	text-align: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	max-width: 100px;
+}
+
+.user_box p{
+	width: 100px;
+	margin: 0;
+}
+
+.user_info {
+	margin-top: 20px;
+}
+
+.edit_account {
+	border-radius: 5px;
+	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #16445e;
+	border: 1px solid #ccc;
+	margin-top: 12px;
+	color: #16445e;
+	font-size: 12px;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.edit_account:hover {
+	color: #fff;
+}
+
+.user_info td{
+ 	width: 100px;
+	vertical-align: middle;
+	padding-bottom: 10px;
+}
+
+.user_info img{
+	margin: 0;
 }

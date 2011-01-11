@@ -42,6 +42,13 @@ class AppController extends Controller {
 	var $helpers = array('Html', 'Form', 'Session','Facebook.Facebook');
 	
 	function beforeFilter() {
+		if($this->Connect->user()){
+			if(!$this->Auth->user('username')){
+				if($this->params['controller']!='users' && $this->params['action']!='edit'){
+					$this->redirect('/users/edit');
+				}
+			}
+		}
 		$this->set('user', $this->Auth->user());
 		$this->set('facebookUser', $this->Connect->user());
 		$this->Auth->fields = array('username' => 'username', 'password' => 'password');

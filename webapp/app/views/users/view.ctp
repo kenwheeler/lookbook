@@ -1,4 +1,4 @@
-<h1><?php echo $currentUser['User']['username']; ?></h1>
+<h1>profile</h1>
 <? if($user['User']['username'] != $currentUser['User']['username']): ?>
 <? if($following): ?>
 <? echo "<p>you are following " .$currentUser['User']['username']. "</p>"?>

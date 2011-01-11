@@ -10,7 +10,12 @@ class UsersController extends AppController {
 	function login()
 	{
 		if($this->Connect->user()){
-			$this->redirect('/');
+			if(!$this->Auth->user('username')){
+			$this->redirect('/users/edit');
+			}
+			else{
+			$this->redirect('/');	
+			}
 		}
 	}
 
@@ -38,6 +43,11 @@ class UsersController extends AppController {
 	function view() {
 		
 		if ($currentUser = $this->User->findByUsername($this->params['slug'])) {
+			
+				if($this->Connect->user()){
+				$picture="https://graph.facebook.com/". $this->Connect->user('id') . "/picture";
+				$this->set('picture', $picture);
+				}
 		        App::import('Model', 'Friend');
 		        $friend = new Friend;
 		        if($following = $friend->find('first',array('conditions' => array('Friend.user_id' => $this->Auth->user('id'), 'Friend.to_user_id' => $currentUser['User']['id'])))){
@@ -49,6 +59,27 @@ class UsersController extends AppController {
 		        $this->set('currentUser', $currentUser); 
 		} 
 		
+	}
+	
+	function account(){
+		
+	}
+	
+	function edit(){
+		
+			$this->User->id = $this->Auth->user('id');
+		
+			if (empty($this->data)) {
+					$this->data = $this->User->read();
+				} else {
+					$this->User->data = Sanitize::clean($this->data);
+					if ($this->User->save($this->data)) {
+						$user = $this->User->read(null, $this->Auth->user('id'));
+						$this->Session->write($this->Auth->sessionKey, $user['User']);
+						$this->redirect('/');
+					}
+				}
+			
 	}
 	
 }

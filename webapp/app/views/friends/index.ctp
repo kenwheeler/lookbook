@@ -3,7 +3,16 @@
 <? if($followees): ?>
 <ul>
 <? foreach($followees as $followee): ?>
-<? echo '<li><a href="/'.$followee['User']['username'].'">'.$followee['User']['username'].'</a></li>'; ?>
+<li class="user_box">
+<? echo '<a href="/'.$followee['User']['username'].'">'; ?>
+<? if($followee['User']['facebook_id']): ?>
+<img src="https://graph.facebook.com/<?= $followee['User']['facebook_id'] ?>/picture" class="user_image"/>
+<? else: ?>
+<img src="/img/blank_user.jpg" class="user_image"/>
+<? endif; ?>
+<p><?= $followee['User']['username']; ?></p>
+</a>
+</li>
 <? endforeach; ?>
 </ul>
 <? else: ?>
@@ -13,7 +22,16 @@
 <? if($followers): ?>
 <ul>
 <? foreach($followers as $follower): ?>
-<? echo '<li><a href="/'.$follower['User']['username'].'">'.$follower['User']['username'].'</a></li>'; ?>
+<li class="user_box">
+<? echo '<a href="/'.$follower['User']['username'].'">'; ?>
+<? if($follower['User']['facebook_id']): ?>
+<img src="https://graph.facebook.com/<?= $follower['User']['facebook_id'] ?>/picture" class="user_image"/>
+<? else: ?>
+<img src="/img/blank_user.jpg" class="user_image"/>
+<? endif; ?>	
+<p><?= $follower['User']['username']; ?></p>
+</a>
+</li>
 <? endforeach; ?>
 </ul>
 <? else: ?>

@@ -1,8 +1,8 @@
 <?php 
 
-class LooksController extends AppController {
+class CollectionsController extends AppController {
 
-	var $name = 'Looks';
+	var $name = 'Collections';
 
 	function index()
 		{
