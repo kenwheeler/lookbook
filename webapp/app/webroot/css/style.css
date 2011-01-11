@@ -206,10 +206,8 @@ h1 {
 	list-style-type: none;
 	display: block;
 	float: left;
-	height: 225px;
-	max-width: 175px;
-	padding: 10px;
-	background: rgba(50,50,50,.5);
+	height: 250px;
+	max-width: 250px;
 	margin-right: 10px;
 	margin-top: 10px;
 }
@@ -220,17 +218,23 @@ h1 {
 
 .product img {
 	display: block;
-	border: 2px solid #565656;
-	margin-bottom: 5px;
-	width: 150px;
-	height: 150px;
+	height: 250px;
+}
+
+.product_info {
+	background: rgba(0,0,0,.75);
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
 }
 
 .product_name {
 	color: #fff;
 	font-size: 10px;
 	margin: 0px;
-	margin-top: 10px;
+	padding: 2px 5px 0px 5px;
 	display: block;
 	max-width: 150px
 }
@@ -239,7 +243,7 @@ h1 {
 	color: #fff;
 	font-size: 10px;
 	margin: 0px;
-	margin-top: 5px;
+	padding: 2px 5px;
 	display: block;
 	max-width: 150px	
 }
