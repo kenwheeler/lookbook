@@ -9,6 +9,7 @@ class UsersController extends AppController {
 
 	function login()
 	{
+	  $this->set('title_for_layout', 'lookbook - lets make a list');
 		if($this->Connect->user()){
 			if(!$this->Auth->user('username')){
 			$this->redirect('/users/edit');
@@ -25,7 +26,7 @@ class UsersController extends AppController {
 	}
 	
 	function register() {
-	  
+	  $this->set('title_for_layout', 'register');
 		if (!empty($this->data))
 		{
 			$this->data['User']['password'] = $this->Auth->password($this->data['User']['passwrd']);
@@ -43,6 +44,7 @@ class UsersController extends AppController {
 	function view() {
 		
 		if ($currentUser = $this->User->findByUsername($this->params['slug'])) {
+		$this->set('title_for_layout', $this->params['slug']);
 			
 				if($this->Connect->user()){
 				$picture="https://graph.facebook.com/". $this->Connect->user('id') . "/picture";
@@ -62,10 +64,12 @@ class UsersController extends AppController {
 	}
 	
 	function account(){
-		
+		$this->set('title_for_layout', 'account');
 	}
 	
 	function edit(){
+		
+		  $this->set('title_for_layout', 'edit account');
 		
 			$this->User->id = $this->Auth->user('id');
 		

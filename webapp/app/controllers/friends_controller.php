@@ -9,6 +9,7 @@ class FriendsController extends AppController {
 	}
 	
 	function index() {
+	  $this->set('title_for_layout', 'friends');
 	  App::import('Model', 'User');
     $friends = new User;
 	  $followers = $friends->find('all', array('joins' => array(

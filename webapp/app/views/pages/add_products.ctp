@@ -1,3 +1,4 @@
+<?$this->set('title_for_layout', 'add products');?>
 <h1>add products</h1>
 
 <p>drag the following link to your bookmarks bar:</p>

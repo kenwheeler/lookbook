@@ -10,6 +10,7 @@ class ProductsController extends AppController {
 	}
 	
 	function index() {
+	  $this->set('title_for_layout', 'products');
 		$user_id = $this->Session->read('Auth.User.id');
 		$this->Product->order = 'Product.created_at DESC';
 		$products = $this->Product->find('all', array('conditions' => array('user_id' => $user_id)));
