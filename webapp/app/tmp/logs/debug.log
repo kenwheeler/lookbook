@@ -1798,3 +1798,5 @@
 2011-01-13 14:50:23 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
 2011-01-13 14:50:24 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
 2011-01-13 14:50:24 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-13 15:15:27 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-13 15:15:27 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
