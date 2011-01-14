@@ -17,6 +17,19 @@ class ProductsController extends AppController {
 		$this->set('products',$products);
 	}
 	
+	function home() {
+	  	$this->set('title_for_layout', 'home');
+		$this->Product->order = 'Product.created_at DESC';
+		$products = $this->Product->find('all');
+		$this->set('products',$products);
+	}
+	
+	function view($id = null){
+			$product = $this->Product->find('all', array('conditions' => array('Product.id' => $id)));
+			$this->set('product',$product);
+			$this->set('title_for_layout', $product[0]['Product']['product_name']);
+	}
+	
 	
 	function add() {
 		  

@@ -24,7 +24,7 @@
 	App::import('Lib', array('routes/SlugRoute'));
 	
 	// Default route 
-	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home')); 
+	Router::connect('/', array('controller' => 'products', 'action' => 'home')); 
 	Router::connect('/add_products', array('controller' => 'pages', 'action' => 'display', 'add_products'));
 	Router::connect(
 	     '/:slug', 

@@ -53,7 +53,7 @@ class AppController extends Controller {
 		$this->set('facebookUser', $this->Connect->user());
 		$this->Auth->fields = array('username' => 'username', 'password' => 'password');
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
-		$this->Auth->loginRedirect = array('controller' => 'pages', 'action' => 'display', 'home');
+		$this->Auth->loginRedirect = array('controller' => 'products', 'action' => 'home');
 		$this->Auth->loginError = "No, you fool!  That's not the right password!";
 		$this->Auth->allow('controller');		
 	}
