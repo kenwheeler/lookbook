@@ -61,6 +61,7 @@ class UsersController extends AppController {
 		        $this->set('currentUser', $currentUser); 
 				App::import('Model', 'Product');
 				$Product = new Product;
+				$Product->order = 'Product.created_at DESC';
 				$products = $Product->find('all',array('conditions' => array('Product.user_id' => $currentUser['User']['id'])));
 				$this->set('products', $products);
 		} 
