@@ -148,12 +148,14 @@ h1 {
 	border: 2px solid #565656;
 	width: 385px;
 	border-radius: 5px;
+	-moz-border-radius: 5px;
 	outline: none;
 	padding: 5px;
 }
 
 #UserLoginForm input[type=submit] {
 	border-radius: 5px;
+	-moz-border-radius: 5px;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -171,6 +173,7 @@ h1 {
 #UserRegisterForm input[type=submit],
 #UserEditForm input[type=submit] {
 	border-radius: 5px;
+	-moz-border-radius: 5px;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -189,6 +192,7 @@ h1 {
 #UserRegisterForm a,
 #UserEditForm a {
 	border-radius: 5px;
+	-moz-border-radius: 5px;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -215,6 +219,12 @@ h1 {
 	margin-right: 10px;
 	margin-top: 10px;
 	overflow: hidden;
+	outline: none;
+}
+
+.product .img_link img {
+	outline: none;
+	border: 0;
 }
 
 .product_inner {
@@ -286,6 +296,7 @@ h1 {
 	margin-top: 0px;
 	margin-right: 4px;
 	padding: 5px;
+	outline: none;
 }
 
 .expand_box {
@@ -315,6 +326,7 @@ h1 {
 
 .user_image {
 	border-radius: 5px;
+	-moz-border-radius: 5px;
 	display: block;
 	margin: auto;
 	height: 50px;
@@ -336,12 +348,17 @@ h1 {
 	margin: 0;
 }
 
+.user_box img{
+	border: 0;
+}
+
 .user_info {
 	margin-top: 20px;
 }
 
 .edit_account {
 	border-radius: 5px;
+	-moz-border-radius: 5px;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;

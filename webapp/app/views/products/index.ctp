@@ -44,7 +44,7 @@ $(document).ready(function() {
 foreach($products as $product) {
 	echo "<li class='product'>";
 	echo "<span class='product_inner'>";
-	echo "<a href='products/view/" . $product['Product']['id'] . "'><img class='product_image' src='" . $product['Product']['product_image'] . "' /></a>";
+	echo "<a class='img_link' href='products/view/" . $product['Product']['id'] . "'><img class='product_image' src='" . $product['Product']['product_image'] . "' /></a>";
 	echo "<span class='product_info'><p class='product_name'>" . $product['Product']['product_name'] . "</p>";
 	echo "<p class='product_price'>" . $product['Product']['product_price'] . "</p><a href='javascript:void(0)' class='expand'>more</a></span>";
 	echo "<span class='expand_box'><p class='expand_links'> <a href='collections/add'>add to collection</a> <a href='products/delete'>delete product</a></p></span></span>";
