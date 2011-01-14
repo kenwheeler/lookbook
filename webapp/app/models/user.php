@@ -3,6 +3,14 @@
 class User extends AppModel {
 	
    var $name = 'User';
+	
+	var $hasMany = array(
+	        'Product' => array(
+	            'className'     => 'Product',
+	            'foreignKey'    => 'user_id',
+	            'order'    => 'Product.created_at DESC'
+	        )
+	    );
 
 	var $validate = array(
 	    'username' => array(

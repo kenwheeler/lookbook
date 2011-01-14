@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
 });
 </script>
-<h1>products</h1>
+<h1>home</h1>
 <ul>
 <?php
 foreach($products as $product) {
