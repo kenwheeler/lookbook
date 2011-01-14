@@ -44,6 +44,7 @@ class ProductsController extends AppController {
 	  $this->data['Product']['product_image']=$product_image;
 	  $this->data['Product']['product_name']=$this->passedArgs['product_name'];
 	  $this->data['Product']['product_price']=$this->passedArgs['product_price'];
+	  $this->data['Product']['id'] = String::uuid();
 		if (!empty($this->data))
 		{
 			$this->Product->data = Sanitize::clean($this->data);
