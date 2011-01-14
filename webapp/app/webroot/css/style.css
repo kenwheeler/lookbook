@@ -5,6 +5,7 @@ background: url(/img/background.png);
 font-family: Cabin, Arial, san-serif;
 font-size: 12px;
 color: #565656;
+height: 100%;
 border-top: 5px solid #00bdf6;
 }
 
@@ -43,6 +44,7 @@ a:hover {
 	left: 0;
 	top: 0px;
 	width: 100%;
+	padding-bottom: 20px;
 }
 
 #inner {
@@ -56,9 +58,10 @@ a:hover {
 
 #inner h1 {
 	margin: 0;
-	margin-top: 35px;
-	font-size: 28px;
+	margin-top: 25px;
+	font-size: 39px;
 	text-transform: lowercase;
+	color: #565656;
 }
 
 h1 {
@@ -234,7 +237,7 @@ h1 {
 
 .product_name {
 	color: #fff;
-	font-size: 10px;
+	font-size: 12px;
 	margin: 0px;
 	padding: 2px 5px 0px 5px;
 	display: block;
@@ -242,7 +245,7 @@ h1 {
 
 .product_price {
 	color: #fff;
-	font-size: 10px;
+	font-size: 12px;
 	margin: 0px;
 	padding: 2px 5px;
 	display: block;
