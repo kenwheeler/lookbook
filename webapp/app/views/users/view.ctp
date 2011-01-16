@@ -1,40 +1,39 @@
 <script language="javascript">
 $(document).ready(function() {
 	
-  var expandOpen = false;
-	
-  $('.product').hover(function(){
-    $(this).children('.product_inner').children('.product_info').slideDown('fast');
-	expandOpen = false;
-  }, function(){
-    $(this).children('.product_inner').children('.product_info').slideUp('fast');
-	if(expandOpen==true){
-	$(this).animate({
-	    scrollTop: [0, 'swing'],
-	   },200);
-	  $(this).find('.expand').html('more');
-	  expandOpen = false;
-	}
-    });
+  	var expandOpen = false;
 
-	$('.expand').click(function() {
-		
-	  if(expandOpen==false) {	
-	  $(this).parent('.product_info').parent('.product_inner').parent('.product').animate({
-	    scrollTop: [50, 'swing'],
-	   },200);
-	  $(this).html('close');
-	  expandOpen = true;
-  		}
-		else {
-		$(this).parent('.product_info').parent('.product_inner').parent('.product').animate({
+	  $('.product').hover(function(){
+	    $(this).children('.product_inner').children('.product_info').slideDown('fast');
+		expandOpen = false;
+	  }, function(){
+	    $(this).children('.product_inner').children('.product_info').slideUp('fast');
+		if(expandOpen==true){
+		$(this).animate({
 		    scrollTop: [0, 'swing'],
 		   },200);
-		  $(this).html('more');
+		  $(this).find('.expand_profile').children('img').attr("src","/img/up_arrow.png");
 		  expandOpen = false;
 		}
-	
-	});
+	    });
+
+		$('.expand_profile').click(function() {
+		  if(expandOpen==false) {	
+		  $(this).parent('.product_info').parent('.product_inner').parent('.product').animate({
+		    scrollTop: [50, 'swing'],
+		   },200);
+		  $(this).children('img').attr("src","/img/down_arrow.png");
+		  expandOpen = true;
+	  		}
+			else {
+			$(this).parent('.product_info').parent('.product_inner').parent('.product').animate({
+			    scrollTop: [0, 'swing'],
+			   },200);
+			  $(this).children('img').attr("src","/img/up_arrow.png");
+			  expandOpen = false;
+			}
+
+		});
 	
 });
 </script>
@@ -50,9 +49,9 @@ foreach($products as $product) {
 	echo "<li class='product'>";
 	echo "<span class='product_inner'>";
 	echo "<a class='img_link' href='products/view/" . $product['Product']['id'] . "'><img class='product_image' src='" . $product['Product']['product_image'] . "' /></a>";
-	echo "<span class='product_info'><p class='product_name'>" . $product['Product']['product_name'] . "</p>";
-	echo "<p class='product_price'>" . $product['Product']['product_price'] . "</p><a href='javascript:void(0)' class='expand'>more</a></span>";
-	echo "<span class='expand_box'><p class='expand_links'> <a href='collections/add'>add product</a> <a href='products/delete'>delete product</a></p></span></span>";
+	echo "<span class='product_info'><a href='javascript:void(0)' class='expand_profile'><img src='/img/up_arrow.png'/></a><p class='product_name'>" . $product['Product']['product_name'] . "</p>";
+	echo "<p class='product_price'>" . $product['Product']['product_price'] . "</p></span>";
+	echo "<span class='expand_box'><p class='expand_links'> <a href='collections/add'><img src='/img/add.png'/></a> <a href='products/delete'><img src='/img/delete.png'/></a></p></span></span>";
 	echo "</li>";
 }
 ?>
@@ -63,9 +62,9 @@ foreach($products as $product) {
 	echo "<li class='product'>";
 	echo "<span class='product_inner'>";
 	echo "<a class='img_link' href='products/view/" . $product['Product']['id'] . "'><img class='product_image' src='" . $product['Product']['product_image'] . "' /></a>";
-	echo "<span class='product_info'><p class='product_name'>" . $product['Product']['product_name'] . "</p>";
-	echo "<p class='product_price'>" . $product['Product']['product_price'] . "</p><a href='javascript:void(0)' class='expand'>more</a></span>";
-	echo "<span class='expand_box'><p class='expand_links'> <a href='products/delete'>delete product</a></p></span></span>";
+	echo "<span class='product_info'><a href='javascript:void(0)' class='expand_profile'><img src='/img/up_arrow.png'/></a><p class='product_name'>" . $product['Product']['product_name'] . "</p>";
+	echo "<p class='product_price'>" . $product['Product']['product_price'] . "</p></span>";
+	echo "<span class='expand_box'><p class='expand_links'><a href='products/delete'><img src='/img/delete.png'/></a></p></span></span>";
 	echo "</li>";
 }
 ?>
