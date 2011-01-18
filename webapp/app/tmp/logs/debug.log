@@ -5086,3 +5086,173 @@
 2011-01-16 15:14:20 Notice: Notice (8): Undefined offset: 0 in [/Users/kenwheeler/Sites/lookbook/webapp/app/views/products/view.ctp, line 6]
 2011-01-16 15:14:20 Notice: Notice (8): Undefined offset: 0 in [/Users/kenwheeler/Sites/lookbook/webapp/app/views/products/view.ctp, line 7]
 2011-01-16 15:14:20 Notice: Notice (8): Undefined offset: 0 in [/Users/kenwheeler/Sites/lookbook/webapp/app/views/products/view.ctp, line 8]
+2011-01-17 10:25:58 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-17 10:25:58 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-17 12:36:46 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-17 12:36:46 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-17 12:37:23 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-17 12:37:23 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-17 12:37:23 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-17 12:37:23 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-17 12:37:23 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-17 12:37:23 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 09:55:35 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 09:55:35 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 10:04:48 Debug: http://www.thinkgeek.com/images/products/frontsquare/e1aa_electronic_music_synth_shirt_anim.gif
+2011-01-18 10:05:18 Debug: http://www.thinkgeek.com/images/products/frontsquare/e1aa_electronic_music_synth_shirt_anim.gif
+2011-01-18 10:06:49 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:09:20 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:09:20 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:09:20 Notice: Notice (8): Undefined property: ProductsController::$User in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:09:20 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:09:32 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:09:32 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:09:32 Notice: Notice (8): Undefined property: ProductsController::$User in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:09:32 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:11:50 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:11:50 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 269]
+2011-01-18 10:11:50 Notice: Notice (8): Undefined property: ProductsController::$User in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:11:50 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:12:36 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:12:36 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:12:36 Notice: Notice (8): Undefined property: ProductsController::$User in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:12:36 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:13:17 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:13:17 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:13:17 Notice: Notice (8): Undefined property: ProductsController::$User in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:13:17 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:15:43 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:15:43 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 265]
+2011-01-18 10:15:43 Notice: Notice (8): Undefined property: ProductsController::$User in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:15:43 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 10:25:03 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:25:03 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:25:03 Notice: Notice (8): Undefined property: ProductsController::$User in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 61]
+2011-01-18 10:25:03 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 61]
+2011-01-18 10:25:47 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:25:47 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:25:47 Notice: Notice (8): Undefined property: ProductsController::$User in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 61]
+2011-01-18 10:25:47 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 61]
+2011-01-18 10:28:46 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:28:46 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:29:13 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:29:13 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:34:08 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:34:08 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:34:47 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:34:47 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:35:43 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:35:43 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:36:59 Debug: http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$
+2011-01-18 10:36:59 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:41:15 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:41:15 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:41:16 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:41:16 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:41:51 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:41:51 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:41:52 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:41:52 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:41:53 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:41:53 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:41:53 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:41:53 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:41:54 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:41:54 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:41:55 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:41:55 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 10:47:20 Notice: Notice (8): Undefined property: ProductsController::$FileUpload in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 54]
+2011-01-18 10:47:48 Debug: Content-Disposition: form-data; name="data[Product][file]"; filename="http://scene7.zumiez.com/is/image/zumiez/152231-0001-front?$product_detail$"
+      Content-Type: image/jpeg
+2011-01-18 10:47:48 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:06:47 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 56]
+2011-01-18 11:08:23 Notice: Notice (8): Trying to get property of non-object in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 56]
+2011-01-18 11:08:29 Notice: Notice (8): Undefined variable: new_name in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 56]
+2011-01-18 11:11:02 Notice: Notice (8): Undefined property: ImageGrabComponent::$save_image in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 56]
+2011-01-18 11:11:28 Notice: Notice (8): Undefined property: ImageGrabComponent::$save_image in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 55]
+2011-01-18 11:11:31 Notice: Notice (8): Undefined property: ImageGrabComponent::$save_image in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 55]
+2011-01-18 11:11:32 Notice: Notice (8): Undefined property: ImageGrabComponent::$save_image in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 55]
+2011-01-18 11:11:32 Notice: Notice (8): Undefined property: ImageGrabComponent::$save_image in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 55]
+2011-01-18 11:16:37 Notice: Notice (8): Undefined variable: product_id in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:16:37 Notice: Notice (8): Undefined variable: file in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 11:16:37 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:16:37 Notice: Notice (8): Undefined variable: file in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 61]
+2011-01-18 11:17:15 Notice: Notice (8): Undefined variable: product_id in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:19:11 Notice: Notice (8): Undefined variable: product_id in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:19:16 Notice: Notice (8): Undefined variable: product_id in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:19:19 Notice: Notice (8): Undefined variable: product_id in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:19:51 Notice: Notice (8): Undefined variable: product_id in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:19:54 Notice: Notice (8): Undefined variable: product_id in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:20:21 Notice: Notice (8): Undefined variable: productid in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:20:36 Notice: Notice (8): Undefined variable: productid in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 77]
+2011-01-18 11:23:35 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:24:46 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:26:02 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:26:33 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:27:06 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:27:21 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:27:27 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:27:48 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:32:53 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:33:03 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:33:17 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:33:36 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:33:42 Notice: Notice (8): Undefined variable: fullImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/file_upload.php, line 272]
+2011-01-18 11:36:42 Notice: Notice (8): Undefined variable: thumbnail in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 60]
+2011-01-18 11:44:01 Notice: Notice (8): Undefined variable: thumbnail in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/products_controller.php, line 59]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:32 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:33 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:34 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:35 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:35 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:35 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:35 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:35 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:35 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]
+2011-01-18 11:57:35 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 36]
+2011-01-18 11:57:35 Notice: Notice (8): Undefined variable: facebookUser in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 37]

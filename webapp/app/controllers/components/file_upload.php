@@ -34,10 +34,10 @@ class FileUploadComponent extends Object {
 			 * test image file for image attributes to secure server against trojan attack
 			 */
 		
-		if (! exif_imagetype ( $file ['tmp_name'] )) {
+		if (! exif_imagetype ( $file['tmp_name'] )) {
 			$typeOK = false;
 		}
-		if (! getimagesize ( $file ['tmp_name'] )) {
+		if (! getimagesize ( $file['tmp_name'] )) {
 			$typeOK = false;
 		}
 		

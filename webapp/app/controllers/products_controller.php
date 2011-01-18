@@ -3,6 +3,7 @@
 class ProductsController extends AppController {
   
   var $name = 'Products';
+  var $components = array('ImageGrab');
 	
 	function beforeFilter() {
 		$this->Auth->allow('add');
@@ -35,18 +36,28 @@ class ProductsController extends AppController {
 		  
 	  if(!empty($this->passedArgs))
 	  {
+	  $this->data['Product']['id'] = String::uuid();
 	  $this->data['Product']['user_id']=$this->passedArgs['user_id'];
 	  $product_image = $this->passedArgs['product_image'];
 	  $product_image = str_replace("*","/",$product_image);
-      $product_image = str_replace(";","?",$product_image);
-      $product_image = str_replace("|","&",$product_image);
-      $product_image = str_replace("^",":",$product_image);
+    $product_image = str_replace(";","?",$product_image);
+    $product_image = str_replace("|","&",$product_image);
+    $product_image = str_replace("^",":",$product_image);
 	  $this->data['Product']['product_image']=$product_image;
 	  $this->data['Product']['product_name']=$this->passedArgs['product_name'];
 	  $this->data['Product']['product_price']=$this->passedArgs['product_price'];
-	  $this->data['Product']['id'] = String::uuid();
 		if (!empty($this->data))
 		{
+		  
+		  $this->ImageGrab->source = $product_image;
+		  $this->ImageGrab->save_to = 'img/uploads/';
+		  $this->ImageGrab->productid = $this->data['Product']['id'];
+		  $savedImage = $this->ImageGrab->download('curl');
+		  $thumbUrl = 'img/uploads/' . $this->ImageGrab->productid . "_thumb.jpeg";
+		  $this->ImageGrab->make_thumb($savedImage, $thumbUrl, 250);
+		  $this->data['Product']['product_image']=$savedImage;
+		  $this->data['Product']['thumb_url'] = $thumbUrl;
+		  
 			$this->Product->data = Sanitize::clean($this->data);
     
 			if ($this->Product->save())
