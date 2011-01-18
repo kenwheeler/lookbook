@@ -13,13 +13,15 @@ class ProductsController extends AppController {
 	function index() {
 	  $this->set('title_for_layout', 'products');
 		$user_id = $this->Session->read('Auth.User.id');
-		$this->Product->order = 'Product.created_at DESC';
-		$products = $this->Product->find('all', array('conditions' => array('user_id' => $user_id)));
+		App::Import('Model','UsersProduct');
+		$usersProduct = new UsersProduct;
+		$usersProduct->order = 'UsersProduct.created_at DESC';
+		$products = $usersProduct->find('all', array('conditions' => array('UsersProduct.user_id' => $user_id)));
 		$this->set('products',$products);
 	}
 	
 	function home() {
-	  	$this->set('title_for_layout', 'home');
+	  $this->set('title_for_layout', 'home');
 		$this->Product->order = 'Product.created_at DESC';
 		$products = $this->Product->find('all');
 		$this->set('products',$products);

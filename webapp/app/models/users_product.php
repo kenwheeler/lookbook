@@ -4,7 +4,7 @@ class UsersProduct extends AppModel {
 	
    var $name = 'UsersProduct';
 	
-	var $hasMany = array(
+	var $belongsTo = array(
 	        'Product' => array(
 	            'className'     => 'Product',
 	            'foreignKey'    => 'product_id',
