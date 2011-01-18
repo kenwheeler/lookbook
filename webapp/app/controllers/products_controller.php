@@ -59,10 +59,19 @@ class ProductsController extends AppController {
 		  $this->data['Product']['thumb_url'] = $thumbUrl;
 		  
 			$this->Product->data = Sanitize::clean($this->data);
+			
+			App::Import('Model','UsersProduct');
+			$usersProduct = new UsersProduct;
+			
+			$usersProduct->data['UsersProduct']['id'] = String::uuid();
+  	  $usersProduct->data['UsersProduct']['product_id'] = $this->data['Product']['id'];
+  	  $usersProduct->data['UsersProduct']['user_id'] = $this->Auth->user('id');
     
 			if ($this->Product->save())
 			{
+			  if ($usersProduct->save()){
 				echo "alert('Product Added'); destroyLookbook();";
+				}
 			}
 			else{ 
 			  echo "alert('Product Add Failed'); destroyLookbook();";

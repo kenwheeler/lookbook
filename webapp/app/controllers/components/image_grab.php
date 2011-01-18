@@ -149,6 +149,10 @@ class ImageGrabComponent extends Object {
     }
     
     $dest_img = imagecreatetruecolor($new_w,$new_h);
+    imagealphablending($dest_img, false);
+    $color = imagecolortransparent($dest_img, imagecolorallocate($dest_img, 0, 0, 0));
+    imagefill($dest_img, 0, 0, $color);
+    imagesavealpha($dest_img, true);
     imagecopyresampled($dest_img, $source_image, 0 , 0 , $src_x, $src_y, $crop_w, $crop_h, $orig_w, $orig_h);
     imagejpeg($dest_img,$dest,100);
     

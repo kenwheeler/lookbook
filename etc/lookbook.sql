@@ -1,37 +1,43 @@
-# Sequel Pro dump
-# Version 1191
-# http://code.google.com/p/sequel-pro
-#
-# Host: localhost (MySQL 5.1.44)
-# Database: lookbook
-# Generation Time: 2011-01-11 00:15:39 -0500
-# ************************************************************
+-- phpMyAdmin SQL Dump
+-- version 3.2.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jan 18, 2011 at 03:50 PM
+-- Server version: 5.1.44
+-- PHP Version: 5.2.13
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
+--
+-- Database: `lookbook`
+--
 
-# Dump of table collections
-# ------------------------------------------------------------
+-- --------------------------------------------------------
 
-DROP TABLE IF EXISTS `collections`;
+--
+-- Table structure for table `collections`
+--
 
 CREATE TABLE `collections` (
-  `id` int(11) DEFAULT NULL
+  `id` char(36) NOT NULL DEFAULT '0',
+  `user_id` char(36) NOT NULL,
+  `collection_name` varchar(55) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `collections`
+--
 
+INSERT INTO `collections` VALUES('4d2f446f-363c-4aeb-a4b0-fb7c4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'asdf', '2011-01-13 13:29:03');
 
-# Dump of table friends
-# ------------------------------------------------------------
+-- --------------------------------------------------------
 
-DROP TABLE IF EXISTS `friends`;
+--
+-- Table structure for table `friends`
+--
 
 CREATE TABLE `friends` (
   `id` char(36) NOT NULL,
@@ -41,50 +47,55 @@ CREATE TABLE `friends` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-LOCK TABLES `friends` WRITE;
-/*!40000 ALTER TABLE `friends` DISABLE KEYS */;
-INSERT INTO `friends` (`id`,`user_id`,`to_user_id`,`created_at`)
-VALUES
-	('4d2b64bb-f9b0-41ef-8c1e-8ee54b856ce9','4d2b57dd-0140-445c-b465-8f6d4b856ce9','4d2aa60c-0c1c-4a59-9d85-4d534b856ce9','2011-01-10 14:57:47'),
-	('4d2b93a3-4548-4bd6-8c8f-90b14b856ce9','4d2b9398-c4b4-48a1-ade5-90b14b856ce9','4d2aa60c-0c1c-4a59-9d85-4d534b856ce9','2011-01-10 18:17:55'),
-	('4d2b93bd-3b44-43d4-babc-90b14b856ce9','4d2aa60c-0c1c-4a59-9d85-4d534b856ce9','4d2b9398-c4b4-48a1-ade5-90b14b856ce9','2011-01-10 18:18:21');
+--
+-- Dumping data for table `friends`
+--
 
-/*!40000 ALTER TABLE `friends` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `friends` VALUES('4d2b64bb-f9b0-41ef-8c1e-8ee54b856ce9', '4d2b57dd-0140-445c-b465-8f6d4b856ce9', '4d2aa60c-0c1c-4a59-9d85-4d534b856ce9', '2011-01-10 14:57:47');
+INSERT INTO `friends` VALUES('4d2b93a3-4548-4bd6-8c8f-90b14b856ce9', '4d2b9398-c4b4-48a1-ade5-90b14b856ce9', '4d2aa60c-0c1c-4a59-9d85-4d534b856ce9', '2011-01-10 18:17:55');
+INSERT INTO `friends` VALUES('4d2b93bd-3b44-43d4-babc-90b14b856ce9', '4d2aa60c-0c1c-4a59-9d85-4d534b856ce9', '4d2b9398-c4b4-48a1-ade5-90b14b856ce9', '2011-01-10 18:18:21');
+INSERT INTO `friends` VALUES('4d2c6d4c-ac70-4556-ab8a-94c34b856ce9', '4d2c6d38-95a8-432a-b053-9aaa4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', '2011-01-11 09:46:36');
+INSERT INTO `friends` VALUES('4d2c6d65-f88c-4deb-96ad-94c34b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', '4d2c6d38-95a8-432a-b053-9aaa4b856ce9', '2011-01-11 09:47:01');
 
+-- --------------------------------------------------------
 
-# Dump of table products
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `products`;
+--
+-- Table structure for table `products`
+--
 
 CREATE TABLE `products` (
-  `id` int(15) NOT NULL AUTO_INCREMENT,
+  `id` char(36) NOT NULL,
   `user_id` char(36) NOT NULL,
   `product_image` varchar(200) NOT NULL,
   `product_name` varchar(200) NOT NULL,
   `product_price` varchar(200) NOT NULL,
+  `thumb_url` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-LOCK TABLES `products` WRITE;
-/*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` (`id`,`user_id`,`product_image`,`product_name`,`product_price`,`created_at`)
-VALUES
-	(2,'4d2a01d2-d420-49bc-847c-58734b856ce9','http://scene7.zumiez.com/is/image/zumiez/168408-0022-front?$product_detail$','Free World Boys Messenger Twill Pant','$29.95','2011-01-09 13:54:41'),
-	(3,'4d2a01d2-d420-49bc-847c-58734b856ce9','http://scene7.zumiez.com/is/image/zumiez/163448-0097-front?$product_detail$','Zine Pulley Heather Grey Hoodie','$29.95','2011-01-09 21:05:46'),
-	(4,'4d2aa60c-0c1c-4a59-9d85-4d534b856ce9','http://scene7.zumiez.com/is/image/zumiez/176552-0007-front?$product_detail$','Deathwish Addict Ellington 8.12 Skate Deck','$51.95','2011-01-10 08:08:38'),
-	(5,'4d2aa60c-0c1c-4a59-9d85-4d534b856ce9','http://s7d3.scene7.com/is/image/ShopTommy/AW81781031_961_FNT?wid=388&amp;hei=388&amp;fmt=jpeg&amp;qlt=100,0&amp;op_sharpen=1&amp;resMode=trilin&amp;op_usm=0.8,1.0,6,0&amp;iccEmbed=0','Red Croc Embossed Leather Strap Watch','$95.00','2011-01-10 21:01:06');
+--
+-- Dumping data for table `products`
+--
 
-/*!40000 ALTER TABLE `products` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `products` VALUES('4d35c6c4-3c20-4ed5-bdcf-4c5c4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35c6c4-3c20-4ed5-bdcf-4c5c4b856ce9.jpeg', 'Slim Fit Tommy Knit Polo', '$34.99', 'img/uploads/4d35c6c4-3c20-4ed5-bdcf-4c5c4b856ce9_thumb.jpeg', '2011-01-18 11:58:45');
+INSERT INTO `products` VALUES('4d35c6ef-cedc-403a-bd22-47e04b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35c6ef-cedc-403a-bd22-47e04b856ce9.jpeg', 'Midtown Blue Relaxed Jean', '$69.99', 'img/uploads/4d35c6ef-cedc-403a-bd22-47e04b856ce9_thumb.jpeg', '2011-01-18 11:59:28');
+INSERT INTO `products` VALUES('4d35c7a7-a670-4c2a-95f3-4acf4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35c7a7-a670-4c2a-95f3-4acf4b856ce9.jpeg', 'Clark Plain-Front Patchwork Madras Pants', '$112.99', 'img/uploads/4d35c7a7-a670-4c2a-95f3-4acf4b856ce9_thumb.jpeg', '2011-01-18 12:02:35');
+INSERT INTO `products` VALUES('4d35c803-19ac-443a-ace2-492f4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35c803-19ac-443a-ace2-492f4b856ce9.jpeg', 'Akai MPC5000 Music Production Center', '$1,999.00', 'img/uploads/4d35c803-19ac-443a-ace2-492f4b856ce9_thumb.jpeg', '2011-01-18 12:04:03');
+INSERT INTO `products` VALUES('4d35d5de-10cc-4973-9385-40ea4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35d5de-10cc-4973-9385-40ea4b856ce9.jpeg', 'Check Western Fit Shirt', '$68.00', 'img/uploads/4d35d5de-10cc-4973-9385-40ea4b856ce9_thumb.jpeg', '2011-01-18 13:03:11');
+INSERT INTO `products` VALUES('4d35dbcb-8abc-469f-b70c-41c34b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35dbcb-8abc-469f-b70c-41c34b856ce9.jpeg', 'Thick Woven Shirt', '$26.90', 'img/uploads/4d35dbcb-8abc-469f-b70c-41c34b856ce9_thumb.jpeg', '2011-01-18 13:28:32');
+INSERT INTO `products` VALUES('4d35d9fe-3224-4170-aba8-4b1f4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35d9fe-3224-4170-aba8-4b1f4b856ce9.jpeg', 'Embroidered Peasant Dress', 'Embroidered Peasant Dress$29.80', 'img/uploads/4d35d9fe-3224-4170-aba8-4b1f4b856ce9_thumb.jpeg', '2011-01-18 13:20:46');
+INSERT INTO `products` VALUES('4d35d961-4410-4e4b-bed5-40c84b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35d961-4410-4e4b-bed5-40c84b856ce9.jpeg', 'Electric Tonette Sunglasses', '$70.00', 'img/uploads/4d35d961-4410-4e4b-bed5-40c84b856ce9_thumb.jpeg', '2011-01-18 13:18:10');
+INSERT INTO `products` VALUES('4d35dfd7-7c68-4e77-b00b-43bb4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35dfd7-7c68-4e77-b00b-43bb4b856ce9.jpeg', 'Gingham Button Up Top', '$22.90', 'img/uploads/4d35dfd7-7c68-4e77-b00b-43bb4b856ce9_thumb.jpeg', '2011-01-18 13:45:43');
+INSERT INTO `products` VALUES('4d35e004-4570-4961-a69b-4bae4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35e004-4570-4961-a69b-4bae4b856ce9.jpeg', 'Thick Woven Shirt', '$26.90', 'img/uploads/4d35e004-4570-4961-a69b-4bae4b856ce9_thumb.jpeg', '2011-01-18 13:46:33');
+INSERT INTO `products` VALUES('4d35e298-0b24-488c-9c7f-44914b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35e298-0b24-488c-9c7f-44914b856ce9.jpeg', 'Thick Woven Shirt', '$26.90', 'img/uploads/4d35e298-0b24-488c-9c7f-44914b856ce9_thumb.jpeg', '2011-01-18 13:57:28');
+INSERT INTO `products` VALUES('4d35fcb2-f7f4-4b07-abdb-40c44b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'img/uploads/4d35fcb2-f7f4-4b07-abdb-40c44b856ce9.jpeg', 'East Village Check Shirt', '$69.99', 'img/uploads/4d35fcb2-f7f4-4b07-abdb-40c44b856ce9_thumb.jpeg', '2011-01-18 15:48:51');
 
+-- --------------------------------------------------------
 
-# Dump of table users
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `users`;
+--
+-- Table structure for table `users`
+--
 
 CREATE TABLE `users` (
   `id` char(36) NOT NULL,
@@ -99,23 +110,29 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`,`email_address`,`username`,`facebook_id`,`first_name`,`last_name`,`password`,`created`,`modified`)
-VALUES
-	('','',NULL,'528985009','','','','2011-01-10 22:56:40','2011-01-10 22:56:40');
+--
+-- Dumping data for table `users`
+--
 
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `users` VALUES('4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', 'dubmediagroup@gmail.com', 'thekenwheeler', '528985009', 'Ken', 'Wheeler', '57f594ed3d2490c088bcf31a2d3285ab5bd9353a', '2011-01-11 09:45:20', '2011-01-11 13:12:23');
+INSERT INTO `users` VALUES('4d2c6d38-95a8-432a-b053-9aaa4b856ce9', 'lindseycorby@gmail.com', 'lindseycorby', NULL, 'Lindsey', 'Corby', '115ab5cebf896e6a071c0dfa52b7f504ea33c562', '2011-01-11 09:46:16', '2011-01-11 11:37:00');
 
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `users_products`
+--
 
+CREATE TABLE `users_products` (
+  `id` char(36) NOT NULL,
+  `user_id` char(36) NOT NULL,
+  `product_id` char(36) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `users_products`
+--
 
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO `users_products` VALUES('4d35fbca-5814-4e5f-a3bd-490d4b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', '4d35e298-0b24-488c-9c7f-44914b856ce9');
+INSERT INTO `users_products` VALUES('4d35fcb3-9218-4479-a3b9-47554b856ce9', '4d2c6d00-5dc4-489f-9a12-9aa94b856ce9', '4d35fcb2-f7f4-4b07-abdb-40c44b856ce9');
