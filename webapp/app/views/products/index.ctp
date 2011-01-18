@@ -43,7 +43,7 @@ $(document).ready(function() {
 foreach($products as $product) {
 	echo "<li class='product'>";
 	echo "<span class='product_inner'>";
-	echo "<a class='img_link' href='products/view/" . $product['Product']['id'] . "'><img class='product_image' src='" . $product['Product']['product_image'] . "' /></a>";
+	echo "<a class='img_link' href='products/view/" . $product['Product']['id'] . "'><img class='product_image' src='" . $product['Product']['thumb_url'] . "' /></a>";
 	echo "<span class='product_info'><a href='javascript:void(0)' class='expand_profile'><img src='/img/up_arrow.png'/></a><p class='product_name'>" . $product['Product']['product_name'] . "</p>";
 	echo "<p class='product_price'>" . $product['Product']['product_price'] . "</p></span>";
 	echo "<span class='expand_box'><p class='expand_links'><a href='collections/add'><img src='/img/add.png'/></a> <a href='products/delete'><img src='/img/delete.png'/></a></p></span></span>";

@@ -1,4 +1,5 @@
 <?php
+
 class ImageGrabComponent extends Object {
 
   var $source;
@@ -68,9 +69,7 @@ class ImageGrabComponent extends Object {
 
   if(isSet($this->set_extension))
   {
-  $ext = strrchr($this->source, ".");
-  $strlen = strlen($ext);
-  $new_name = basename(substr($this->source, 0, -$strlen)).'.'.$new_image_ext;
+  $new_name = $this->productid .'.'.$new_image_ext;
   }
   else
   {
@@ -115,27 +114,44 @@ class ImageGrabComponent extends Object {
   curl_exec($ch);
   curl_close($ch);
   fclose($fp);
-  
+
   }
   
-  public function make_thumb($src,$dest,$desired_height)
+  public function make_thumb($src,$dest,$desired_size)
   {
     /* read the source image */
     $source_image = imagecreatefromjpeg($src);
-    $width = imagesx($source_image);
-    $height = imagesy($source_image);
 
-    /* find the "desired height" of this thumbnail, relative to the desired width  */
-    $desired_width = floor($width*($desired_height/$height));
+    $new_w = $desired_size;
+    $new_h = $desired_size;
 
-    /* create a new, "virtual" image */
-    $virtual_image = imagecreatetruecolor($desired_width,$desired_height);
+    $orig_w = imagesx($source_image);
+    $orig_h = imagesy($source_image);
 
-    /* copy source image at a resized size */
-    imagecopyresampled($virtual_image,$source_image,0,0,0,0,$desired_width,$desired_height,$width,$height);
-
-    /* create the physical thumbnail image to its destination */
-    imagejpeg($virtual_image,$dest);
+    $w_ratio = ($new_w / $orig_w);
+    $h_ratio = ($new_h / $orig_h);
+    
+    if ($orig_w > $orig_h ) {//landscape
+    $crop_w = round($orig_w * $h_ratio);
+    $crop_h = $new_h;
+    $src_x = ceil( ( $orig_w - $orig_h ) / 2 );
+    $src_y = 0;
+    } elseif ($orig_w < $orig_h ) {//portrait
+    $crop_h = round($orig_h * $w_ratio);
+    $crop_w = $new_w;
+    $src_x = 0;
+    $src_y = ceil( ( $orig_h - $orig_w ) / 2 );
+    } else {//square
+    $crop_w = $new_w;
+    $crop_h = $new_h;
+    $src_x = 0;
+    $src_y = 0;
+    }
+    
+    $dest_img = imagecreatetruecolor($new_w,$new_h);
+    imagecopyresampled($dest_img, $source_image, 0 , 0 , $src_x, $src_y, $crop_w, $crop_h, $orig_w, $orig_h);
+    imagejpeg($dest_img,$dest,100);
+    
   }
   
 }
