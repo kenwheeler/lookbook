@@ -41,7 +41,7 @@ $(document).ready(function() {
 <ul>
 <?php
 foreach($products as $product) {
-      $userAction = "<a href='products/add/".$product['Product']['id']."'><img src='/img/add.png'/></a>";
+      $userAction = "<a href='users_products/add/".$product['Product']['id']."'><img src='/img/add.png'/></a>";
   foreach($usersProducts as $userProduct){
     if($userProduct['Product']['id']==$product['Product']['id']){
       $userAction = "<a href='products/delete/".$product['Product']['id']."'><img src='/img/delete.png'/></a>";

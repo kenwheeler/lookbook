@@ -1,0 +1,93 @@
+#lookbook_header {
+	position: fixed;
+	font-family: 'Cabin';
+	top:0px;
+	line-height: 1;
+	font-size: 12px;
+	background: url(http://www.dubmediagroup.com/lookbook/images/background.png);
+	height: 50px;
+	width: 100%;
+	display: block;
+	margin-top: -50px;
+	min-width: 600px;
+	z-index: 99999;
+	color: #565656;
+	padding: 0;
+	text-transform: lowercase;
+}
+
+#lookbook_logo {
+	position: relative;
+	width: 88px;
+	height: 50px;
+	margin-left: 10px;
+	float: left;
+	font-size: 24px;
+	padding-top: 12px;
+	line-height: 1 !important;
+}
+
+.blue {
+	color: #00bdf6;
+	line-height: 1;
+}
+
+#lookbook_close_button {
+	position: relative;
+	background: url(http://www.dubmediagroup.com/lookbook/images/close_button.png);
+	display: block;
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 0px;
+}
+
+#lookbook_action_buttons {
+	position: relative;
+	float: right;
+	display: block;
+	font-family: 'Cabin';
+}
+
+#lookbook_action_buttons button {
+	border-radius: 5px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #eee;
+	border: 1px solid #ccc;
+	margin-top: 12px;
+	margin-right: 20px;
+	color: #565656;
+	font-size: 12px;
+	font-family: 'Cabin',arial black, san-serif;
+	font-weight: bold;
+	text-transform: lowercase;
+}
+
+#lookbook_action_buttons button:hover {
+	/* background: #eef; */
+	color: #00bdff;
+}
+
+#lookbook_action_buttons button[disabled] {
+	color: #ccc;
+}
+
+div[id^="lookbook_img_container"] {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+
+span[id^="lookbook_img_overlay"] {
+	background: rgba(0,189,246,0.75);
+	opacity: 0.75;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1000px;
+	height: 1000px;
+	z-index: 9999;
+}

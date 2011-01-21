@@ -65,7 +65,11 @@ class UsersController extends AppController {
     		$usersProduct = new UsersProduct;
     		$usersProduct->order = 'UsersProduct.created_at DESC';
     		$products = $usersProduct->find('all', array('conditions' => array('UsersProduct.user_id' => $currentUser['User']['id'])));
+    		$user_id = $this->Session->read('Auth.User.id');
+    		$usersProducts = $usersProduct->find('all' ,array('conditions' => array('UsersProduct.user_id' => $user_id)));
+    		$this->set('usersProducts',$usersProducts);
     		$this->set('products',$products);
+    		
 		} 
 		
 	}

@@ -49,7 +49,7 @@
 		
 		<ul id="sections">
 		
-		<li><a href="/">home</a></li><li><a href="/friends">friends</a></li><li><a href="/products">products</a></li><li><a href="/collections">collections</a></li>
+		<li><a href="/">home</a></li><li><a href="/friends">friends</a></li><li><a href="/products">products</a></li>
 		
 		</ul>
 		

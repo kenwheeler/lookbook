@@ -26,7 +26,7 @@ class ProductsController extends AppController {
 		$products = $this->Product->find('all');
 		$this->set('products',$products);
 		$user_id = $this->Session->read('Auth.User.id');
-		
+
 		App::Import('Model','UsersProduct');
 		$usersProduct = new UsersProduct;
 		$usersProduct->order = 'UsersProduct.created_at DESC';
