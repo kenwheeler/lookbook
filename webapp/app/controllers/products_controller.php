@@ -25,6 +25,13 @@ class ProductsController extends AppController {
 		$this->Product->order = 'Product.created_at DESC';
 		$products = $this->Product->find('all');
 		$this->set('products',$products);
+		$user_id = $this->Session->read('Auth.User.id');
+		
+		App::Import('Model','UsersProduct');
+		$usersProduct = new UsersProduct;
+		$usersProduct->order = 'UsersProduct.created_at DESC';
+		$usersProducts = $usersProduct->find('all', array('conditions' => array('UsersProduct.user_id' => $user_id)));
+		$this->set('usersProducts',$usersProducts);
 	}
 	
 	function view($id = null){
@@ -38,20 +45,28 @@ class ProductsController extends AppController {
 		  
 	  if(!empty($this->passedArgs))
 	  {
+	  
+	  function cleanString($string) {
+	    $string = str_replace("*","/",$string);
+      $string = str_replace(";","?",$string);
+      $string = str_replace("|","&",$string);
+      $string = str_replace("^",":",$string);
+      return $string;
+	  }  
+	  
 	  $this->data['Product']['id'] = String::uuid();
 	  $this->data['Product']['user_id']=$this->passedArgs['user_id'];
-	  $product_image = $this->passedArgs['product_image'];
-	  $product_image = str_replace("*","/",$product_image);
-    $product_image = str_replace(";","?",$product_image);
-    $product_image = str_replace("|","&",$product_image);
-    $product_image = str_replace("^",":",$product_image);
-	  $this->data['Product']['product_image']=$product_image;
-	  $this->data['Product']['product_name']=$this->passedArgs['product_name'];
-	  $this->data['Product']['product_price']=$this->passedArgs['product_price'];
+	  $this->data['Product']['product_url']=cleanString($this->passedArgs['product_url']);
+	  $this->data['Product']['product_image']=cleanString($this->passedArgs['product_image']);
+	  $this->data['Product']['product_name']=cleanString($this->passedArgs['product_name']);
+	  $this->data['Product']['product_price']=cleanString($this->passedArgs['product_price']);
+	  
 		if (!empty($this->data))
 		{
 		  
-		  $this->ImageGrab->source = $product_image;
+		  echo "alert('Product Added'); destroyLookbook();";
+		  
+		  $this->ImageGrab->source = $this->data['Product']['product_image'];
 		  $this->ImageGrab->save_to = 'img/uploads/';
 		  $this->ImageGrab->productid = $this->data['Product']['id'];
 		  $savedImage = $this->ImageGrab->download('curl');
@@ -72,13 +87,18 @@ class ProductsController extends AppController {
 			if ($this->Product->save())
 			{
 			  if ($usersProduct->save()){
-				echo "alert('Product Added'); destroyLookbook();";
+				
 				}
 			}
-			else{ 
-			  echo "alert('Product Add Failed'); destroyLookbook();";
-			}
 		}
+		}
+	}
+	
+	function delete($id=null) {
+	  App::Import('Model','UsersProduct');
+		$usersProduct = new UsersProduct;
+		if($usersProduct->delete($id)){
+		  $this->redirect($this->referer());
 		}
 	}
 	
