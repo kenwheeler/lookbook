@@ -1,5 +1,11 @@
 <script language="javascript">
 $(document).ready(function() {
+	
+	$('.collection_image').each(function(){
+		if($(this).attr('selected')=="true"){
+			$(this).css('border', '2px solid #00bdf6');
+		}
+	})
 
 	$('.collection_image').click(function(){
 		if($(this).attr('selected')=="false"){
@@ -29,32 +35,42 @@ $(document).ready(function() {
 			}
 		}
 		
-		action = $('#CollectionAddForm').attr('action') + "/products:" + collection_string;;
+		action = $('#CollectionEditForm').attr('action') + "/products:" + collection_string;;
 		
-		$('#CollectionAddForm').attr('action', action); 
+		$('#CollectionEditForm').attr('action', action); 
 		
-		$('#CollectionAddForm').submit();
+		$('#CollectionEditForm').submit();
 		
 	})
 });
 </script>
 
-<h1>add collection</h1>
+<div id="editForm">
+
 <?php
 
-echo $form->create('Collection', array('action' => 'add'));
-echo $form->input('collection_name', array('label'=>'collection name'));
+if($collection['Collection']['user_id']==$userId){
+
+echo $form->create('Collection', array('action' => 'edit'));
+echo $form->input('collection_name');
 ?>
 <p>select products:</p>
 <ul id="CollectionProductsBox">
 <?
 foreach($products as $product){
-	echo "<li><img class='collection_image' selected='false' pid=".$product['Product']['id']." src='/".$product['Product']['thumb_url']."'/></li>";
+$selected = "false";
+foreach($clproducts as $cl){
+if($product['Product']['id']==$cl['Product']['id']){
+$selected = "true";
+}
+}
+	echo "<li><img class='collection_image' selected='".$selected."' pid=".$product['Product']['id']." src='/".$product['Product']['thumb_url']."'/></li>";
 }
 ?>
 </ul>
 <?
+echo $form->end('save');
 
-echo $form->end('add collection');
-
+}
 ?>
+</div>

@@ -47,13 +47,21 @@ foreach($products as $product) {
       $userAction = "<a href='products/delete/".$product['Product']['id']."'><img src='/img/delete.png'/></a>";
     }
   }
+
+if($product['Product']['user_id']==$userId){
+	$edit = "<a href='products/edit/".$product['Product']['id']."'><img src='/img/edit.png'/></a>";
+}
+else{
+	$edit="";
+}
+
 	echo "<li class='product home'>";
 	echo "<span class='product_inner'>";
 	echo "<a class='img_link' href='products/view/" . $product['Product']['id'] . "'><img class='product_image' src='" . $product['Product']['thumb_url'] . "' /></a>";
 	echo "<span class='product_info'><a href='javascript:void(0)' class='expand'><img src='/img/up_arrow.png'/></a><p class='product_name'>" . $product['Product']['product_name'] . "</p>";
 	echo "<p class='product_price'>" . $product['Product']['product_price'] . "</p>";
 	echo "<p class='added_by'>added by <a href='/".$product['User']['username']."'>".$product['User']['username']."</a></p></span>";
-	echo "<span class='expand_box'><p class='expand_links'><a href='".$product['Product']['product_url']."'><img src='/img/home.png'/></a> ".$userAction."</p></span></span>";
+	echo "<span class='expand_box'><p class='expand_links'><a href='".$product['Product']['product_url']."'><img src='/img/home.png'/></a> ".$edit.$userAction."</p></span></span>";
 	echo "</li>";
 }
 ?>

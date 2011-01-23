@@ -59,6 +59,8 @@ class UsersController extends AppController {
 		        $this->set('following', false); 
 		        }
 		        $this->set('currentUser', $currentUser); 
+				$user_id = $this->Session->read('Auth.User.id');
+			    $this->set('userId' , $user_id);
 				App::import('Model', 'Product');
 				$Product = new Product;
 				App::Import('Model','UsersProduct');

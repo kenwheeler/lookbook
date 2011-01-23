@@ -125,13 +125,19 @@ h1 {
 
 #UserLoginForm,
 #UserRegisterForm,
-#UserEditForm{ 
+#UserEditForm,
+#CollectionAddForm,
+#ProductEditForm,
+#CollectionEditForm { 
 	width: 400px;
 }
 
 #UserLoginForm label,
 #UserRegisterForm label,
-#UserEditForm label{
+#UserEditForm label,
+#CollectionAddForm label,
+#ProductEditForm label,
+#CollectionEditForm label{
 	display: block;
 	font-weight: bold;
 	font-size: 12px;
@@ -141,7 +147,10 @@ h1 {
 
 #UserLoginForm input,
 #UserRegisterForm input,
-#UserEditForm input {
+#UserEditForm input,
+#CollectionAddForm input,
+#ProductEditForm input,
+#CollectionEditForm input {
 	display: block;
 	font-size: 12px;
 	margin-bottom: 5px;
@@ -171,7 +180,10 @@ h1 {
 }
 
 #UserRegisterForm input[type=submit],
-#UserEditForm input[type=submit] {
+#UserEditForm input[type=submit],
+#CollectionAddForm input[type=submit],
+#ProductEditForm input[type=submit],
+#CollectionEditForm input[type=submit]{
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	padding: 10px;
@@ -190,7 +202,8 @@ h1 {
 
 #UserLoginForm a,
 #UserRegisterForm a,
-#UserEditForm a {
+#UserEditForm a,
+#CollectionAddForm a {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	padding: 10px;
@@ -208,6 +221,27 @@ h1 {
 	text-decoration: none;
 	color: #fff;
 	cursor: pointer;
+}
+
+#CollectionProductsBox {
+	width: 500px;
+	max-height: 500px;
+}
+
+#CollectionProductsBox li {
+	list-style-type: none;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+
+#CollectionProductsBox li img {
+	height: 100px;
+	width: 100px;
+	border: 2px solid #565656;
+	cursor: hand;
 }
 
 .product {
@@ -259,6 +293,25 @@ h1 {
 	width: 100%;
 	left: 0;
 	display: none;
+}
+
+.collection_info {
+	background: rgba(0,0,0,.75);
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+}
+
+.collection_name {
+	color: #fff;
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px 5px 5px 5px;
+	display: block;
+	overflow: hidden;
+	height: 15px;
 }
 
 .product_name {
