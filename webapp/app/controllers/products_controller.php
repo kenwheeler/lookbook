@@ -7,6 +7,7 @@ class ProductsController extends AppController {
 	
 	function beforeFilter() {
 		$this->Auth->allow('add');
+		$this->Auth->allow('view');
 		parent::beforeFilter();
 	}
 	

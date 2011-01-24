@@ -38,24 +38,16 @@ App::import('Sanitize');
 
 class AppController extends Controller {
 
-	var $components = array('Auth', 'Session', 'Facebook.Connect');
-	var $helpers = array('Html', 'Form', 'Session','Facebook.Facebook');
+	var $components = array('Auth', 'Session');
+	var $helpers = array('Html', 'Form', 'Session');
 	
 	function beforeFilter() {
-		if($this->Connect->user()){
-			if(!$this->Auth->user('username')){
-				if($this->params['controller']!='users' && $this->params['action']!='edit'){
-					$this->redirect('/users/edit');
-				}
-			}
-		}
 		$this->set('user', $this->Auth->user());
-		$this->set('facebookUser', $this->Connect->user());
 		$this->Auth->fields = array('username' => 'username', 'password' => 'password');
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
 		$this->Auth->loginRedirect = array('controller' => 'products', 'action' => 'home');
 		$this->Auth->loginError = "No, you fool!  That's not the right password!";
-		$this->Auth->allow('controller');		
+		$this->Auth->allow('controller');
 	}
 	
 	function isAuthorized() {

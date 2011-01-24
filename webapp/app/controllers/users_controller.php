@@ -10,14 +10,6 @@ class UsersController extends AppController {
 	function login()
 	{
 	  $this->set('title_for_layout', 'lookbook - lets make a list');
-		if($this->Connect->user()){
-			if(!$this->Auth->user('username')){
-			$this->redirect('/users/edit');
-			}
-			else{
-			$this->redirect('/');	
-			}
-		}
 	}
 
 	function logout(){
@@ -46,10 +38,6 @@ class UsersController extends AppController {
 		if ($currentUser = $this->User->findByUsername($this->params['slug'])) {
 		$this->set('title_for_layout', $this->params['slug']);
 			
-				if($this->Connect->user()){
-				$picture="https://graph.facebook.com/". $this->Connect->user('id') . "/picture";
-				$this->set('picture', $picture);
-				}
 		        App::import('Model', 'Friend');
 		        $friend = new Friend;
 		        if($following = $friend->find('first',array('conditions' => array('Friend.user_id' => $this->Auth->user('id'), 'Friend.to_user_id' => $currentUser['User']['id'])))){
