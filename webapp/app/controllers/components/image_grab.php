@@ -117,6 +117,97 @@ class ImageGrabComponent extends Object {
 
   }
   
+  public function uploadFile($folder, $formdata, $name) {
+		
+		// list of permitted file types, this is only images but documents can be added
+		$permitted = array ('image/gif', 'image/jpeg', 'image/pjpeg', 'image/png' );
+		
+		$file = $formdata;
+		$this->log($file, LOG_DEBUG);
+		
+		// loop through and deal with the files
+		
+		// assume filetype is false
+		$typeOK = false;
+		// check filetype is ok
+		foreach ( $permitted as $type ) {
+			if ($type == $file ['type']) {
+				$this->log($type, LOG_DEBUG);
+				$typeOK = true; 
+				break;
+			}
+		}
+				
+		/*
+			 * test image file for image attributes to secure server against trojan attack
+			 */
+		
+		if (! exif_imagetype ( $file ['tmp_name'] )) {
+			$typeOK = false;
+		}
+		if (! getimagesize ( $file ['tmp_name'] )) {
+			$typeOK = false;
+		}
+		
+		// if file type ok upload the file
+		if ($typeOK) {
+			$this->log("type ok", LOG_DEBUG);
+			// switch based on error code
+			$file = $this->moveUploadedFile($file, $folder, $name);
+			switch ($file ['error']) {
+				case 0 :
+					return $file;
+					break;
+				case 3 :
+					// an error occured
+					$file ['error'] = "Error uploading. Please try again.";
+					break;
+				default :
+					// an error occured
+					$file ['error'] = "System error uploading. Contact webmaster.";
+					break;
+			}
+		} elseif ($file ['error'] == 4) {
+			// no file was selected for upload
+			$file ['error'] = "No file Selected";
+		} else {
+			// unacceptable file type
+			$file ['error'] = "This file cannot be uploaded. Acceptable file types: gif, jpg, png.";
+		}
+		//}
+		return $file;
+		
+	}
+	
+	private function moveUploadedFile($file, $folder, $name){
+		$folder_url = WWW_ROOT . $folder;
+		
+		// create the folder if it does not exist
+        if (! is_dir ( $folder_url )) {
+			mkdir ( $folder_url );
+		}
+		
+		$ext = explode('/', $file['type']);
+		$ext = "." . $ext[1];
+		$filename = $name . $ext;
+		
+		// create full filename
+		$full_url = $folder_url . '/' . $filename;
+		
+		// upload the file
+		$success = move_uploaded_file ( $file ['tmp_name'], $full_url );
+		$this->log(">>>>>>>>>>>".$success, LOG_DEBUG);
+		
+		if($success){
+			$file['file'] = $full_url;
+			$file['name'] = $filename;
+			$file['directory'] = $folder_url;
+			$file['ext'] = $ext;
+		}
+		
+		return $file;
+	}
+  
   public function make_thumb($src,$dest,$desired_size)
   {
     /* read the source image */

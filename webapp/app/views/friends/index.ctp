@@ -5,7 +5,13 @@
 <? foreach($followees as $followee): ?>
 <li class="user_box">
 <? echo '<a href="/'.$followee['User']['username'].'">'; ?>
-<img src="/img/blank_user.jpg" class="user_image"/>
+  
+  <? if(isset($followee['User']['profile_img'])): ?>
+  <img src="/<?= $followee['User']['profile_img']?>" class="user_image"/>
+  <? else: ?>
+  <img src="/img/blank_user.jpg" class="user_image"/>
+  <? endif; ?>
+
 <p><?= $followee['User']['username']; ?></p>
 </a>
 </li>
@@ -20,7 +26,13 @@
 <? foreach($followers as $follower): ?>
 <li class="user_box">
 <? echo '<a href="/'.$follower['User']['username'].'">'; ?>
-<img src="/img/blank_user.jpg" class="user_image"/>	
+  
+  <? if(isset($follower['User']['profile_img'])): ?>
+  <img src="/<?= $follower['User']['profile_img']?>" class="user_image"/>
+  <? else: ?>
+  <img src="/img/blank_user.jpg" class="user_image"/>
+  <? endif; ?>
+
 <p><?= $follower['User']['username']; ?></p>
 </a>
 </li>

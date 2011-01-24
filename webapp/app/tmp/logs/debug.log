@@ -9217,3 +9217,233 @@
 2011-01-23 22:27:54 Notice: Notice (8): Undefined offset: 0 in [/Users/kenwheeler/Sites/lookbook/webapp/app/views/collections/view.ctp, line 41]
 2011-01-23 22:27:54 Notice: Notice (8): Undefined offset: 0 in [/Users/kenwheeler/Sites/lookbook/webapp/app/views/collections/view.ctp, line 45]
 2011-01-23 22:27:58 Notice: Notice (8): Undefined variable: user in [/Users/kenwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:03:17 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:03:21 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:03:51 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:03:58 Notice: Notice (8): Undefined variable: facebook in [/Users/kwheeler/Sites/lookbook/webapp/app/views/products/view.ctp, line 10]
+2011-01-24 12:04:00 Notice: Notice (8): Undefined variable: facebook in [/Users/kwheeler/Sites/lookbook/webapp/app/views/products/view.ctp, line 10]
+2011-01-24 12:04:03 Notice: Notice (8): Undefined variable: facebook in [/Users/kwheeler/Sites/lookbook/webapp/app/views/products/view.ctp, line 10]
+2011-01-24 12:11:28 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:20:31 Notice: Notice (8): Undefined property: UsersController::$Auth in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/users_controller.php, line 6]
+2011-01-24 12:21:35 Debug: Photo on 2010-07-30 at 15.12.jpg
+2011-01-24 12:21:36 Notice: Notice (8): Undefined property: UsersController::$ImageGrab in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/users_controller.php, line 34]
+2011-01-24 12:23:32 Debug: Photo on 2010-07-30 at 15.12.jpg
+2011-01-24 12:23:32 Notice: Notice (8): Undefined variable: savedImage in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/users_controller.php, line 34]
+2011-01-24 12:28:26 Notice: Notice (8): Undefined index:  profile_img in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/users_controller.php, line 28]
+2011-01-24 12:28:26 Notice: Notice (8): Undefined index:  profile_img in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/users_controller.php, line 30]
+2011-01-24 12:28:26 Debug: 
+2011-01-24 12:28:26 Notice: Notice (8): Array to string conversion in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 123]
+2011-01-24 12:30:26 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:31:50 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:32:22 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpwPBCdo
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:32:22 Debug: image/jpeg
+2011-01-24 12:32:22 Debug: type ok
+2011-01-24 12:32:22 Debug: >>>>>>>>>>>1
+2011-01-24 12:32:22 Notice: Notice (8): Array to string conversion in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/components/image_grab.php, line 123]
+2011-01-24 12:39:44 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpgKUy3k
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:39:44 Debug: image/jpeg
+2011-01-24 12:39:44 Debug: type ok
+2011-01-24 12:39:44 Debug: >>>>>>>>>>>1
+2011-01-24 12:39:45 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:39:57 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpwPBCdo
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:39:57 Debug: image/jpeg
+2011-01-24 12:39:57 Debug: type ok
+2011-01-24 12:39:57 Debug: >>>>>>>>>>>1
+2011-01-24 12:40:01 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:44:44 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phppPxmpC
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:44:44 Debug: image/jpeg
+2011-01-24 12:44:44 Debug: type ok
+2011-01-24 12:44:44 Debug: >>>>>>>>>>>1
+2011-01-24 12:46:49 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:46:51 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:46:52 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:46:53 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:46:53 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:47:14 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpgKUy3k
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:47:14 Debug: image/jpeg
+2011-01-24 12:47:14 Debug: type ok
+2011-01-24 12:47:14 Debug: >>>>>>>>>>>1
+2011-01-24 12:48:21 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpgKUy3k
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:48:21 Debug: image/jpeg
+2011-01-24 12:48:21 Debug: type ok
+2011-01-24 12:48:21 Debug: >>>>>>>>>>>1
+2011-01-24 12:48:35 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpwPBCdo
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:48:35 Debug: image/jpeg
+2011-01-24 12:48:35 Debug: type ok
+2011-01-24 12:48:35 Debug: >>>>>>>>>>>1
+2011-01-24 12:48:35 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:48:41 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:49:20 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:49:21 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:49:22 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:49:31 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpwPBCdo
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:49:31 Debug: image/jpeg
+2011-01-24 12:49:31 Debug: type ok
+2011-01-24 12:49:31 Debug: >>>>>>>>>>>1
+2011-01-24 12:49:46 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phppPxmpC
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:49:46 Debug: image/jpeg
+2011-01-24 12:49:46 Debug: type ok
+2011-01-24 12:49:46 Debug: >>>>>>>>>>>1
+2011-01-24 12:51:38 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phppPxmpC
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:51:38 Debug: image/jpeg
+2011-01-24 12:51:38 Debug: type ok
+2011-01-24 12:51:38 Debug: >>>>>>>>>>>1
+2011-01-24 12:51:38 Notice: Notice (8): Undefined index:  id in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/users_controller.php, line 31]
+2011-01-24 12:52:20 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpgKUy3k
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:52:20 Debug: image/jpeg
+2011-01-24 12:52:20 Debug: type ok
+2011-01-24 12:52:20 Debug: >>>>>>>>>>>1
+2011-01-24 12:52:20 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:52:45 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpwPBCdo
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:52:45 Debug: image/jpeg
+2011-01-24 12:52:45 Debug: type ok
+2011-01-24 12:52:45 Debug: >>>>>>>>>>>1
+2011-01-24 12:53:01 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:54:12 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:54:16 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:54:22 Notice: Notice (8): Undefined index:  passwrd in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/users_controller.php, line 24]
+2011-01-24 12:55:00 Notice: Notice (8): Undefined index:  passwrd in [/Users/kwheeler/Sites/lookbook/webapp/app/controllers/users_controller.php, line 24]
+2011-01-24 12:55:03 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:55:03 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:55:05 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:55:09 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:56:22 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:56:23 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:57:11 Debug: Array
+(
+    [name] => 02407_sikirica_1920x1200.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/php2PTtIf
+    [error] => 0
+    [size] => 3009898
+)
+
+2011-01-24 12:57:11 Debug: image/jpeg
+2011-01-24 12:57:11 Debug: type ok
+2011-01-24 12:57:11 Debug: >>>>>>>>>>>1
+2011-01-24 12:57:15 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:57:19 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:58:39 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpgKUy3k
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:58:39 Debug: image/jpeg
+2011-01-24 12:58:39 Debug: type ok
+2011-01-24 12:58:39 Debug: >>>>>>>>>>>1
+2011-01-24 12:58:41 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:59:11 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:59:12 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]
+2011-01-24 12:59:18 Debug: Array
+(
+    [name] => Photo on 2010-07-30 at 15.12.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpgKUy3k
+    [error] => 0
+    [size] => 48154
+)
+
+2011-01-24 12:59:18 Debug: image/jpeg
+2011-01-24 12:59:18 Debug: type ok
+2011-01-24 12:59:18 Debug: >>>>>>>>>>>1
+2011-01-24 12:59:20 Notice: Notice (8): Undefined variable: user in [/Users/kwheeler/Sites/lookbook/webapp/app/views/layouts/default.ctp, line 35]

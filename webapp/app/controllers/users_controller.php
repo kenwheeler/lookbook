@@ -1,7 +1,7 @@
 <?php 
 
 class UsersController extends AppController {
-	
+	var $components =array("ImageGrab");
 	function beforeFilter() {
 		$this->Auth->allow('register');
 		parent::beforeFilter();
@@ -22,8 +22,21 @@ class UsersController extends AppController {
 		if (!empty($this->data))
 		{
 			$this->data['User']['password'] = $this->Auth->password($this->data['User']['passwrd']);
-			$this->User->data = Sanitize::clean($this->data);
-			$this->User->data['id'] = String::uuid();
+			$this->data['User']['id'] = String::uuid();
+			
+			if ($this->data ['Image'] ['file'] ['error'] == 0) {
+				$img_id = String::uuid ();
+				$file = $this->ImageGrab->uploadFile ( 'img/uploads/', $this->data ['Image'] ['file'], $img_id );
+			}
+			
+			if (!empty ( $file )) {
+			  $thumbUrl = 'img/uploads/' . $this->data['User']['id'] . "_profile.jpeg";
+  		  $this->ImageGrab->make_thumb($file['file'], $thumbUrl, 50);
+  		  $this->data['User']['profile_img'] = $thumbUrl;
+		  }
+		  
+		  $this->User->data = Sanitize::clean($this->data);
+			
 			if ($this->User->save())
 			{
 				$this->Auth->login($this->data);
@@ -77,6 +90,18 @@ class UsersController extends AppController {
 			if (empty($this->data)) {
 					$this->data = $this->User->read();
 				} else {
+				  
+				  if ($this->data ['Image'] ['file'] ['error'] == 0) {
+    				$img_id = String::uuid ();
+    				$file = $this->ImageGrab->uploadFile ( 'img/uploads/', $this->data ['Image'] ['file'], $img_id );
+    			}
+
+    			if (!empty ( $file )) {
+    			  $thumbUrl = 'img/uploads/' . $this->User->id . "_profile.jpeg";
+      		  $this->ImageGrab->make_thumb($file['file'], $thumbUrl, 50);
+      		  $this->data['User']['profile_img'] = $thumbUrl;
+    		  }
+				  
 					$this->User->data = Sanitize::clean($this->data);
 					if ($this->User->save($this->data)) {
 						$user = $this->User->read(null, $this->Auth->user('id'));
